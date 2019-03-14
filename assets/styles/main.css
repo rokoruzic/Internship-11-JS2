@@ -15,14 +15,7 @@
     z-index: 0;
 }
 
-.offers__item:hover .item__heart-full {
-    opacity: 1;
-}
 
-.offers__item:hover .item__img-description {
-    opacity: 1;
-    top: 297px;
-}
 
 .item__paragraph {
     line-height: 1.5;
@@ -102,4 +95,14 @@
     .main__offers {
         width: 100%;
     }
+}
+
+
+.offers__item__hover__item__heart-full {/*offers__item:hover .item__heart-full*/
+    opacity: 1;
+    
+}
+.offers__item__hover__item__img-description {/*offers__item:hover .item__img-description*/
+    opacity: 1;
+    top: 297px;
 }

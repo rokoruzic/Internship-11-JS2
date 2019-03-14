@@ -106,3 +106,14 @@
     opacity: 1;
     top: 297px;
 }
+.emptyHeart{
+    opacity:0;
+}
+.fullHeart{
+    opacity:1;
+}
+#favorites{
+    position:absolute;
+    font-size: 30px;
+    right: 50%;
+}

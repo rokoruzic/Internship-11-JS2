@@ -183,16 +183,15 @@ for (let i = 0; i < containerSearchFilterElementsCount; i++) {
 }
 
 var dropdownListItemElementsCount = document.getElementsByClassName("dropdown__list__item").length;
-for(let i = 0;i<dropDownTopAllDivElementsCount;i++)
-{
+for (let i = 0; i < dropdownListItemElementsCount; i++) {
 
-let dropdownListItemElements = document.getElementsByClassName("dropdown__list__item")[i];
-dropdownListItemElements.addEventListener("mouseenter",function(){
-let listItemCountElements=document.getElementsByClassName("list__item__count")[i];
-  dropdownListItemElements.classList.add("dropdown__list__item__hover");
-  listItemCountElements.classList.add("dropdown__list__item__hover__list__item__count");
+  let dropdownListItemElements = document.getElementsByClassName("dropdown__list__item")[i];
+  dropdownListItemElements.addEventListener("mouseenter", function () {
+    let listItemCountElements = document.getElementsByClassName("list__item__count")[i];
+    dropdownListItemElements.classList.add("dropdown__list__item__hover");
+    listItemCountElements.classList.add("dropdown__list__item__hover__list__item__count");
 
-});
+  });
 
 dropdownListItemElements.addEventListener("mouseleave",function(){
   let listItemCountElements=document.getElementsByClassName("list__item__count")[i];
@@ -218,10 +217,28 @@ for (let i = 0; i < offersItemElementsCount; i++) {
     itemHeartFullElement.classList.remove("offers__item__hover__item__heart-full");
     itemImgDescriptionElement.classList.remove("offers__item__hover__item__img-description");
 
-
-
   });
 
-
 }
+// 4.zadatak
+var heartFullElementCount = document.getElementsByClassName("item__heart-full").length;
+for (let i = 0; i < heartFullElementCount; i++) {
+  let heartFullElement = document.getElementsByClassName("item__heart-full")[i];
+  var favoriteCount = 0;
+  heartFullElement.addEventListener("click", function () {
+    if (!heartFullElement.classList.contains("fullHeart"))
+      favoriteCount++;
+    heartFullElement.classList.add("fullHeart");
+    let favoriteDivElement = document.getElementById("favorites");
+    favoriteDivElement.innerHTML = `Favorites: ${favoriteCount}`;
+  });
+}
+
+//5.zadatak
+
+
+  
+
+
+
 

@@ -225,20 +225,39 @@ var heartFullElementCount = document.getElementsByClassName("item__heart-full").
 for (let i = 0; i < heartFullElementCount; i++) {
   let heartFullElement = document.getElementsByClassName("item__heart-full")[i];
   var favoriteCount = 0;
-  heartFullElement.addEventListener("click", function () {
+  heartFullElement.addEventListener("click", function (event) {
     if (!heartFullElement.classList.contains("fullHeart"))
       favoriteCount++;
     heartFullElement.classList.add("fullHeart");
     let favoriteDivElement = document.getElementById("favorites");
     favoriteDivElement.innerHTML = `Favorites: ${favoriteCount}`;
+    event.stopPropagation();
+
   });
 }
 
 //5.zadatak
+var offersItemElementsCount2 = document.getElementsByClassName("offers__item").length;
+
+for (let i = 0; i < offersItemElementsCount2; i++) {
+  let offersItemElements = document.getElementsByClassName("offers__item")[i];
+
+  offersItemElements.addEventListener("click", function () {
+
+    let item__paragraph = document.getElementsByClassName("item__paragraph")[i];
+    let item__img = document.getElementsByClassName("item__img")[i];
+    let itemPriceElements = document.getElementsByClassName("item__price")[i];
+    let itemImgDescriptionElement = document.getElementsByClassName("item__img-description")[i]
+    let w = window.open();
+    w.document.open();
+    w.document.write(`<h1> ${item__paragraph.innerHTML} </h1> <p> ${itemPriceElements.innerHTML} </p> 
+    <img src= ${item__img.src}> <p> ${itemImgDescriptionElement.innerHTML} </p>`);
+    w.document.close();
+
+  })
 
 
-  
-
+}
 
 
 

@@ -248,9 +248,9 @@ for (let i = 0; i < offersItemElementsCount2; i++) {
     let item__img = document.getElementsByClassName("item__img")[i];
     let itemPriceElements = document.getElementsByClassName("item__price")[i];
     let itemImgDescriptionElement = document.getElementsByClassName("item__img-description")[i]
-    let w = window.open();
-    w.document.open();
-    w.document.write(`<h1> ${item__paragraph.innerHTML} </h1> <p> ${itemPriceElements.innerHTML} </p> 
+    let itemWindow = window.open();
+    itemWindow.document.open();
+    itemWindow.document.write(`<h1> ${item__paragraph.innerHTML} </h1> <p> ${itemPriceElements.innerHTML} </p> 
     <img src= ${item__img.src}> <p> ${itemImgDescriptionElement.innerHTML} </p>`);
     w.document.close();
 

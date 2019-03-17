@@ -53,6 +53,7 @@ createLiElements(sleeveLenghtUlElement, sleeevLenghtArray);
 function createOfferElements(array) {
   var mainOffersElement = document.getElementById("offers");
   array.forEach(function(offer) {
+
     let div = document.createElement("div");
     div.classList.add("offers__item");
 
@@ -237,9 +238,8 @@ for (let i = 0; i < heartFullElementCount; i++) {
 }
 
 //5.zadatak
-var offersItemElementsCount2 = document.getElementsByClassName("offers__item").length;
 
-for (let i = 0; i < offersItemElementsCount2; i++) {
+for (let i = 0; i < offersItemElementsCount; i++) {
   let offersItemElements = document.getElementsByClassName("offers__item")[i];
 
   offersItemElements.addEventListener("click", function () {
